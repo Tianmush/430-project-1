@@ -1,0 +1,265 @@
+*{
+    font-family:verdana,tahoma,sans-serif;
+}
+
+/*main body style */
+body{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas: 
+    'logo      logo    logo'
+    'searchbar result  detail';
+    overflow-x: hidden;
+}
+
+ header{
+     height:100px;
+     grid-area: logo;
+     /* max-width: 500px; */
+ }
+ 
+ .header-wrap {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+ }
+ /* header h1{
+     margin:0;
+     color:#c8d8df;
+     text-align:center;
+     font-size:50px;
+     padding-top: 35px;
+     position: absolute;
+     left: 42vw;
+     top:-2vh;
+     font-family: 'Raleway', sans-serif;
+ } */
+
+/* searchbar style */
+.searchbar{
+    /* color: white; */
+    background-color:#d2e3ea;
+    padding: 1em;
+    grid-area: searchbar;
+    max-width: 200px;
+    margin-left: 2vw;
+}
+
+.widgets{
+    margin-top: 1em;
+    margin-bottom:1em;
+}
+
+/* search button style */
+button{
+    display : inline-block;
+    cursor : pointer;
+    border-style : solid;
+    border-width : 1px;
+    border-radius : 50px;
+    padding : 10px 18px;
+    box-shadow : 0 1px 4px rgba(0,0,0,.6);
+    font-size : 9.5pt;
+    font-weight : bold;
+    color : black;
+    text-shadow : 0 1px 3px rgba(0,0,0,.4);
+    font-family : sans-serif;
+    text-decoration : none;
+  }
+  
+  
+  button:hover{
+      background:burlywood;
+  }
+  
+  button:active{
+      background: rgb(230, 181, 117);
+      box-shadow : 0 0 10px rgba(0,0,0,.6);
+  }
+  
+  button:focus {outline:0;}
+  
+
+/* result style */
+h2{
+    grid-area: text;
+    color: #FFF;
+    position: relative;
+    top: 150px;
+    left: 20px;
+}
+
+#content{
+    color: black;
+    grid-area: result;
+    /* border-radius: 20px; */
+    /* border-color: #7e77ba; */
+    /* border-style: solid; */
+    margin: 1em;
+    margin-top: 0%;
+    /* background-color:#d2e3ea; */
+    height: 70vh;
+    overflow: auto;
+}
+
+#content p{
+    margin-left:1em;
+}
+
+#detail {
+    grid-area: detail;
+    background-color:#ffffff;
+    padding: 1em;
+    max-width: 300px;
+    height: auto;
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+
+/* scrollbar style */
+::-webkit-scrollbar {
+    width: 15px;
+}
+  
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 25px;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: rgb(62, 95, 88);
+    border-radius: 25px;
+}
+
+.result {
+    position: relative;
+    height: 240px;
+    width: 140px;
+    float:left;
+    padding:5px;
+    padding-bottom: 30px;
+    margin-left:40px;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: #293E6A;
+    border-radius: 5px;
+    border-style: outset;
+    border-color: #425886;
+}
+
+.result img {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    display:block;
+    height: 160px;
+    width: 120px;
+}
+
+.result span {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    display:block;
+    /* height: 20px; */
+    width: 120px;
+    font-size:14px;
+    color:#FFF
+}
+
+.result:hover{
+    background-color:#ccc;
+    cursor: pointer;
+}
+
+.result span a{
+    margin-left: 20px;
+    margin-bottom: 10px;
+    font-size:14px;
+    font-weight:bold;
+    display:block;
+    max-width: 180px;
+    text-align: center;
+    color:#FFF
+}
+
+.result audio{
+    width: 130px;
+}
+
+/* radio checkbox style */
+#cardType{
+    margin: 1em;
+}
+
+.type {
+    display:inline-block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 15px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.type input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+  
+.checkmark {
+    position: absolute;
+    top: 3px;
+    left: 15px;
+    height: 15px;
+    width: 15px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+  
+.type:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+  
+.type input:checked ~ .checkmark {
+    background-color: #a00909;
+}
+
+/* footer style*/
+footer{
+    position:fixed;
+    bottom: 0px;
+    left: 0px;
+    color: white;
+    width:100vw;
+    background-color: #293E6A;
+    padding: 10px;
+}
+
+footer a:link{
+    margin-left: 20px;
+    margin-bottom: 10px;
+    font-size:14px;
+    max-width: 180px;
+    text-align: center;
+    color:#FFF
+}
+
+footer a:visited{
+    color:aqua
+}
+
+
+footer a:hover{
+    color:#ccc
+}
+
+footer a:active{
+    color:#FFF
+}

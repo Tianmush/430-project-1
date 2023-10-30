@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Yu-Gi-Oh Card Finder</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&family=Red+Hat+Mono:wght@300&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="header-wrap">
+        <img src="./logo.png" style="width: 60px;height: 60px;" alt="Yu-Gi-Oh! logo">
+        <h1 class="title" style="margin-left: 20px;">Yu-Gi-Oh! card finder</h1>
+    </header>
+    <div class="searchbar">
+        <aside class="menu">
+            <p class="menu-label">
+                Keywords
+            </p>
+            <input id="searchterm" type="text" size="20" placeholder="Magician" maxlength="20" />
+            <p class="menu-label">
+                Max results
+            </p>
+            <!-- <select id="limit">
+                    <option value="5">5</option>
+                    <option value="10" selected>10</option>
+                    <option value="25">25</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                    <option value="10000">All</option>
+                </select> -->
+            <p class="menu-label">
+                Type of card
+            </p>
+            <ul class="menu-list">
+                <div id="cardType">
+                    <label class="type">Spell
+                        <input type="radio" id="Spell" value="spell%20card" name="type">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="type">Trap
+                        <input type="radio" id="Trap" value="trap%20card" name="type">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="type">Effect Monster
+                        <input type="radio" id="EffectMonster" value="effect%20monster" name="type" checked>
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="type">Normal Monster
+                        <input type="radio" id="NormalMonster" value="normal%20monster" name="type">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="type">Fusion Monster
+                        <input type="radio" id="FusionMonster" value="fusion%20monster" name="type">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="type">Synchro Monster
+                        <input type="radio" id="SynchroMonster" value="synchro%20monster" name="type">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="type">XYZ Monster
+                        <input type="radio" id="XYZMonster" value="xyz%20monster" name="type">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="type">Link Monster
+                        <input type="radio" id="LinkMonster" value="link%20monster" name="type">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="type">Pendulum Effect Monster
+                        <input type="radio" id="PendulumMonster" value="pendulum%20effect%20monster" name="type">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </ul>
+            <div class="widgets">
+                <button class="button is-primary" id="search">Find Cards</button>
+            </div>
+        </aside>
+    </div>
+    <!-- <h2>Results:</h2> -->
+    <div id="content">
+        <p><i>Find Cards please</i></p>
+    </div>
+
+    <div id="detail">
+
+    </div>
+    <footer>2022 | Shencheng Fu | source: <a
+            href="https://db.ygoprodeck.com/api-guide/">https://db.ygoprodeck.com/api-guide/</a>
+        |<a href="documentation.html">Documentation</a></footer>
+</body>
+
+</html>
