@@ -36,6 +36,12 @@ const getCardList = async (request, response) => {
         return respondJSON(request, response, 200, {
           data: list,
         });
+      } else {
+        const responseJSONEmpty = {
+          message: 'No cards found',
+          id: 'notFound',
+        };
+        return respondJSON(request, response, 404, responseJSONEmpty);
       }
     } catch (error) {
       const responseJSON2 = {
@@ -60,7 +66,7 @@ const getCardInfo = (request, response) => {
         id: 'internalError',
       };
       respondJSON(request, response, 500, responseJSON6);
-      return resolve();
+      resolve();
     }
 
     let body = '';
@@ -73,7 +79,7 @@ const getCardInfo = (request, response) => {
         const postData = JSON.parse(body);
 
         if (postData.id) {
-          const cardInfo = cardInfoJson.data.find(card => card.id === postData.id);
+          const cardInfo = cardInfoJson.data.find((card) => card.id === postData.id);
 
           if (cardInfo) {
             respondJSON(request, response, 200, cardInfo);
